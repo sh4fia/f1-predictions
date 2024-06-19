@@ -92,7 +92,7 @@ rotate_x(qual,'Front_Grid_Secured',qual$Driver,45,'Front Grid Secured','Drives V
 # Training the model
 
 #install.packages("rpart.plot")
-final_dataset = read.csv('/Users/shafiadudekula/Desktop/Train_data.csv')
+final_dataset = read.csv('https://raw.githubusercontent.com/sh4fia/f1-predictions/main/code/Train_data.csv')
 library(rpart)
 library(rpart.plot)
 fit <- rpart(final_dataset$Champion~., data = final_dataset[c('Average_points_Scored','No_of_times_secured_front_grid','Total_no_of_fastest_Laps')], method = 'class')
